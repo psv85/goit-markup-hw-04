@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="normalize" href="./css/normalize.css" />
@@ -13,7 +13,6 @@
   </head>
 
   <body>
-    <!----header---->
     <header class="header-page">
       <div class="container navigation">
         <a href="./" class="logo-header"
@@ -36,11 +35,18 @@
         </nav>
         <div class="link-list">
           <a href="mailto:info@devstudio.com" class="contacts-link"
-            >info@devstudio.com</a
-          >
+            ><svg class="mail-link" width="16" height="12">
+              <use href="./img/icons/sprite.svg#icon-letter"></use>
+            </svg>
+            info@devstudio.com
+          </a>
+
           <a href="tel:+380961111111" class="contacts-link"
-            >+38 096 111 11 11</a
-          >
+            ><svg class="mail-link" width="10" height="16">
+              <use href="./img/icons/sprite.svg#icon-mobile"></use>
+            </svg>
+            +38 096 111 11 11
+          </a>
         </div>
       </div>
     </header>
@@ -72,7 +78,7 @@
             <li class="projects-list-item">
               <a href="#" aria-label="ссылка Технокряк" class="project-link"
                 ><img
-                  src="./images/portfolio/tehno.jpg"
+                  src="./portfolioimg/website1.jpg"
                   alt="Технокряк"
                   width="370"
                 />
@@ -91,7 +97,7 @@
                 aria-label="Постер New Orlean vs Golden Star"
                 class="project-link"
                 ><img
-                  src="./images/portfolio/poster.jpg"
+                  src="./portfolioimg/design.jpg"
                   alt="Постер New Orlean vs Golden Star"
                   width="370"
                 />
@@ -109,7 +115,7 @@
             <li class="projects-list-item">
               <a href="#" aria-label="Ресторан Seafood" class="project-link"
                 ><img
-                  src="./images/portfolio/seafood.jpg"
+                  src="./portfolioimg/app1.jpg"
                   alt="Ресторан Seafood"
                   width="370"
                 />
@@ -125,7 +131,7 @@
             <li class="projects-list-item">
               <a href="#" aria-label="Проект Prime" class="project-link"
                 ><img
-                  src="./images/portfolio/prime.jpg"
+                  src="./portfolioimg/marketing.jpg"
                   alt="Проект Prime"
                   width="370"
                 />
@@ -141,7 +147,7 @@
             <li class="projects-list-item">
               <a href="#" aria-label="Проект Boxes" class="project-link"
                 ><img
-                  src="./images/portfolio/boxes.jpg"
+                  src="./portfolioimg/app2.jpg"
                   alt="Проект Boxes"
                   width="370"
                 />
@@ -160,7 +166,7 @@
                 aria-label="Inspiration has no Borders"
                 class="project-link"
                 ><img
-                  src="./images/portfolio/solutions.jpg"
+                  src="./portfolioimg/website2.jpg"
                   alt="Inspiration has no Borders"
                   width="370"
                 />
@@ -179,7 +185,7 @@
                 aria-label="Издание Limited Edition"
                 class="project-link"
                 ><img
-                  src="./images/portfolio/limited.jpg"
+                  src="./portfolioimg/design2.jpg"
                   alt="Издание Limited Edition"
                   width="370"
                 />
@@ -195,7 +201,7 @@
             <li class="projects-list-item">
               <a href="#" aria-label="Проект LAB" class="project-link"
                 ><img
-                  src="./images/portfolio/lab.jpg"
+                  src="./portfolioimg/marketing2.jpg"
                   alt="Проект LAB"
                   width="370"
                 />
@@ -211,7 +217,7 @@
             <li class="projects-list-item">
               <a href="#" aria-label="Growing Business" class="project-link">
                 <img
-                  src="./images/portfolio/growing.jpg"
+                  src="./portfolioimg/app3.jpg"
                   alt="Growing Business"
                   width="370"
                 />
@@ -250,25 +256,17 @@
         <div class="join-us footer-div">
           <p><b>ПРИСОЕДИНЯЙТЕСЬ</b></p>
           <ul class="list join-us-list">
-            <li class="join-us-list-item">
-              <a href="#" aria-label="ссылка Instagram"
-                ><img src="./images/logo/instagramft.svg" alt="Instagram"
-              /></a>
+            <li class="join-us-list-item item-instagram">
+              <a href="#" aria-label="ссылка Instagram"></a>
             </li>
-            <li class="join-us-list-item">
-              <a href="#" aria-label="ссылка Twitter"
-                ><img src="./images/logo/twitter.svg" alt="Twitter"
-              /></a>
+            <li class="join-us-list-item item-twitter">
+              <a href="#" aria-label="ссылка Twitter"></a>
             </li>
-            <li class="join-us-list-item">
-              <a href="#" aria-label="ссылка Facebook"
-                ><img src="./images/logo/facebook.svg" alt="Facebook"
-              /></a>
+            <li class="join-us-list-item item-facebook">
+              <a href="#" aria-label="ссылка Facebook"></a>
             </li>
-            <li class="join-us-list-item">
-              <a href="#" aria-label="ссылка LinkIn"
-                ><img src="./images/logo/linkedin.svg" alt="LinkIn"
-              /></a>
+            <li class="join-us-list-item item-linkin">
+              <a href="#" aria-label="ссылка LinkIn"></a>
             </li>
           </ul>
         </div>

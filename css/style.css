@@ -2,8 +2,8 @@
 dark-color - #212121
 main-color - #757575
 wait - #FFFFFF
-adress-link-color - color: rgba(255, 255, 255, 0.6)**/
-
+adress-link-color - color: rgba(255, 255, 255, 0.6)
+**/
 html {
   box-sizing: border-box;
 }
@@ -69,6 +69,8 @@ p {
 
 .logo-header {
   font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
@@ -78,6 +80,8 @@ p {
 
 .logo-footer {
   font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
@@ -115,6 +119,7 @@ p {
   padding-top: 20px;
   padding-bottom: 20px;
 
+  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
@@ -138,12 +143,23 @@ p {
   margin-right: 30px;
 }
 .contacts-link {
+  display: inline-flex;
+  align-items: center;
+
+  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--main-text-color);
+}
+
+.mail-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .contacts-link:hover,
@@ -174,6 +190,8 @@ p {
 
 .section-hero .btn {
   background-color: var(--accent-color);
+  border: transparent;
+  box-shadow: none;
 }
 
 .btn-portfolio {
@@ -185,8 +203,8 @@ p {
   letter-spacing: 0.03em;
   color: var(--dark-text-color);
   background-color: #f5f4fa;
-  border: transparent;
-  box-shadow: none;
+  border-color: transparent;
+  border-radius: 4px;
 }
 
 .btn:hover,
@@ -195,6 +213,8 @@ p {
 .btn-portfolio:focus {
   color: var(--main-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .section-hero {
@@ -202,7 +222,13 @@ p {
   text-align: center;
   vertical-align: middle;
   height: 600px;
-  background: rgba(47, 48, 58, 0.8);
+  background-color: rgba(47, 48, 58, 0.8);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0.7) 50%
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
 }
 
 .hero-title {
@@ -239,6 +265,34 @@ p {
 .benefits-item {
   width: calc((100% - 30px * 3) / 4);
   margin-right: 30px;
+}
+
+.benefits-item::before {
+  display: block;
+  content: " ";
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.benefits-item.item-details::before {
+  background-image: url("../img/icons/details.svg");
+}
+
+.benefits-item.item-punctual::before {
+  background-image: url("../img/icons/punctual.svg");
+}
+
+.benefits-item.item-planing::before {
+  background-image: url("../img/icons/planing.svg");
+}
+
+.benefits-item.item-technology::before {
+  background-image: url("../img/icons/technology.svg ");
 }
 
 .main-text {
@@ -322,28 +376,60 @@ p {
   text-align: center;
 }
 
-.team-social-link-li {
+.team-social-link-list {
   display: flex;
   justify-content: space-evenly;
   margin-top: 16px;
+}
+
+.team-social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+  background-color: var(--main-white-color);
+}
+
+.link-icon {
+  fill: currentColor;
+}
+
+.team-social-link:hover {
+  color: var(--main-white-color);
+  background-color: var(--accent-color);
 }
 
 .clients-list {
   display: flex;
 }
 
-.clients-list-item {
-  display: flex;
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.logo-list {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: calc((100% - 30px * 5) / 6);
+  width: 170px;
   height: 90px;
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  color: #afb1b8;
 }
-.clients-list-item:not(:last-child) {
-  margin-right: 30px;
+
+.logo-list:hover,
+.logo-list:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.logo {
+  fill: currentColor;
 }
 
 .projects {
@@ -361,7 +447,8 @@ p {
   text-decoration: none;
 }
 
-/**PORTFOLIO**/
+/**PORTFOLIO
+**/
 .pf-container {
   margin-bottom: 50px;
 }
@@ -389,6 +476,12 @@ p {
   border: 1px solid #eeeeee;
 }
 
+.projects-list-item:hover {
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .projects-list-item:nth-child(3n) {
   margin-right: 0;
 }
@@ -399,6 +492,9 @@ p {
 
 .projects-list-item a {
   text-decoration: none;
+}
+
+.projects-list-item img {
 }
 
 .project-link p,
@@ -430,14 +526,14 @@ h3 {
 .join-us {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.143px;
+  line-height: 1.143;
   letter-spacing: 0.03em;
   color: var(--main-white-color);
 }
 
 .mailing {
   font-size: 14px;
-  line-height: 1.143px;
+  line-height: 1.143;
   letter-spacing: 0.03em;
   color: var(--main-white-color);
 }
@@ -449,6 +545,35 @@ h3 {
 
 .join-us-list-item:not(:last-child) {
   margin-right: 10px;
+}
+
+.join-us-list-item {
+  width: 44px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join-us-list-item:hover {
+  background-color: var(--accent-color);
+}
+
+.item-instagram {
+  background-image: url("../img/icons/instagramft.svg");
+}
+
+.item-twitter {
+  background-image: url("../img/icons/twitterft.svg");
+}
+
+.item-facebook {
+  background-image: url("../img/icons/facebookft.svg");
+}
+
+.item-linkin {
+  background-image: url("../img/icons/linkedinft.svg");
 }
 
 .address {
@@ -494,13 +619,43 @@ h3 {
   margin-right: 30px;
 }
 
-/**для div з блоком подписки**/
+/**для div з блоком підписки**/
 
 .mailing-block {
+  display: flex;
   margin-top: 20px;
+}
+
+.mailing-block .btn {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-color);
+  background-color: var(--main-white-color);
+  height: 50px;
+  box-shadow: none;
+  border: none;
+}
+
+.mailing-block .btn::after {
+  content: " ";
+  background-image: url("../img/icons/sendicon.svg");
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.mailing-block .btn:hover {
+  color: var(--main-white-color);
+  background-color: var(--accent-color);
 }
 
 .input {
   display: inline-block;
   margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
 }
